@@ -10,13 +10,16 @@
     height: 70px;
     width: 70px;
     border-radius: 100%;
-    border: 2px solid var(--blue-4);
+    border: 2px solid white;
     padding: 0px;
 }
 
 .NavLink {
     text-decoration: none;
-    margin-right: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     width: 8rem;
     text-align: start;
     border-right: 3px solid var(--blue-3);
@@ -69,15 +72,30 @@
     white-space: nowrap;
 } */
 
-/* @media only screen and (min-width: 700px) {
-    h1 {
-        font-size: 5rem;
+@media only screen and (max-width: 768px) {
+    .NavLink {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 }
 
-@media only screen and (min-width: 700px) {
-    h1 {
-        font-size: 5rem;
+@media only screen and (max-width: 576px) {
+    .NavLink {
+        margin-left: 1.2rem;
+        margin-top: 0rem;
+        padding-top: ;
+        width: 100vw;
+        background-color: white;
+        transition: ease-in-out 0.4s;
+        font-size: 1.7rem;
     }
-} */
+
+    .NavLink i {
+        font-size: 2.5rem;
+    }
+
+    .NavLink:nth-child(1) {
+        margin-top: 1.5rem;
+    }
+}
 

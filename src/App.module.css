@@ -19,6 +19,7 @@
 
 * {
     box-sizing: border-box;
+    transition: 0.4s;
 }
 
 h1 {

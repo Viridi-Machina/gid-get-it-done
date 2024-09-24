@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar className={styles.NavBar} expand='md' fixed='top'>
+    <Navbar className={styles.NavBar} expand='sm' fixed='top'>
       <Container fluid='xxl'>
         <NavLink to='/'>
           <Navbar.Brand className='m-0'>
