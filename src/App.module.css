@@ -11,11 +11,31 @@
     font-family: 'Figtree', sans-serif;
     background-color: #f0fdff;
     min-height: 100vh;
+    
 }
 
 .Main {
     padding-top: 82px;
 }
+
+/* .Content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #dadadf;
+} */
+  
+/* .FillerImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.Image {
+    max-height: 40vh;
+    max-width: 100%;
+    object-fit: contain;
+} */
 
 * {
     box-sizing: border-box;
@@ -50,3 +70,22 @@ i:hover {
     cursor: pointer;
     color: var(--blue-1);
 }
+
+/* figure {
+    text-align: center;
+    display: inline-block;
+} */
+
+/* scrollbar */
+/* *::-webkit-scrollbar {
+    width: 25px;
+}
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+    background: #888;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */

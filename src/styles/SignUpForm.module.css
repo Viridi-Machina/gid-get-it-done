@@ -1,0 +1,93 @@
+@import '../App.module.css';
+
+.Row {
+    height: calc(100vh - 81px);
+}
+
+.Input {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #7177a1;
+    text-align: center;
+    padding: 10px;
+}
+
+.Header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--blue-1);
+}
+
+.SignUpRow1,
+.SignUpRow2,
+.SignUpRow3 {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 100px;
+    width: 28rem;
+    position: relative;
+    left: -10rem;
+    box-shadow: inset 3px 4px 15px rgba(128, 128, 128, 0.4);
+}
+
+.SignUpRow1 {
+    border: 10px solid var(--blue-1);
+    left: -10rem;
+}
+
+.SignUpRow2 {
+    border: 8px solid var(--blue-2);
+}
+
+.SignUpRow2 p {
+    
+}
+
+.SignUpRow3 {
+    border: 5px solid var(--blue-3);
+}
+
+.Link {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: end;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem;
+    padding-right: 1.5rem;
+    display: block;
+    margin: auto;
+}
+
+.Link span {
+    color: var(--blue-3);
+    font-weight: 600;
+}
+
+.Container {
+    padding: 30px 10px;
+}
+
+.SignInCol {
+    height: 320px;
+}
+
+.SignUpCol {
+    height: 375px;
+}
+
+.ImageWrapper {
+    overflow: hidden;
+}
+
+.Image {
+    position: relative;
+    height: 400px;
+    width: 400px;
+}
