@@ -5,6 +5,7 @@ import './api/axiosDefaults'
 
 import styles from './App.module.css';
 import NavBar from './components/NavBar';
+import LoggedOut from './components/LoggedOut';
 import SignUpForm from './pages/auth/SignUpForm';
 
 
@@ -16,7 +17,7 @@ function App() {
             <NavBar />
             <Container className={styles.Main}>
                 <Switch>
-                    <Route exact path='/' render={() => <h1>GET IT DONE</h1>} />
+                    <Route exact path='/' render={() => <LoggedOut />} />
                     <Route exact path='/sign-in' render={() => <SignUpForm />} />
                     <Route exact path='/new-user' render={() => <h1>New User</h1>} />
                     <Route render={() => <p>Page not found</p>} />

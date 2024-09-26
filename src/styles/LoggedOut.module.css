@@ -12,12 +12,6 @@
     color: #7177a1;
     text-align: center;
     padding: 10px;
-    box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.1);
-}
-
-.Input:nth-child(2) {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
 }
 
 .Header {
@@ -32,22 +26,29 @@
 }
 
 .SignUpRow1,
+.SignUpRow2,
 .SignUpRow3 {
     background-color: #ffffff;
     padding: 10px;
-    border-radius: 30px;
-    width: 24rem;
-    /* position: relative;
-    left: -10rem; */
+    border-radius: 100px;
+    width: 28rem;
+    position: relative;
+    left: -10rem;
     box-shadow: inset 3px 4px 15px rgba(128, 128, 128, 0.4);
 }
 
 .SignUpRow1 {
-    border: 5px solid var(--blue-3);
+    border: 10px solid var(--blue-1);
+    left: -10rem;
 }
 
+.SignUpRow2 {
+    border: 8px solid var(--blue-2);
+}
+
+
 .SignUpRow3 {
-    border: 5px solid var(--blue-1);
+    border: 5px solid var(--blue-3);
 }
 
 .SignUpRow3 p {
@@ -58,9 +59,10 @@
 .Link {
     text-decoration: none;
     text-transform: uppercase;
-    text-align: center;
+    text-align: end;
     letter-spacing: 0.1rem;
     font-size: 1.3rem;
+    padding-right: 1.5rem;
     display: block;
     margin: auto;
 }
@@ -90,15 +92,4 @@
     position: relative;
     height: 400px;
     width: 400px;
-}
-
-.Button {
-    background-color: var(--blue-3);
-    box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.3);
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 15px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
 }
