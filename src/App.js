@@ -1,7 +1,7 @@
 import { Switch, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 
-import './api/axiosDefaults'
+import './api/axiosDefaults';
 
 import styles from './App.module.css';
 import NavBar from './components/NavBar';

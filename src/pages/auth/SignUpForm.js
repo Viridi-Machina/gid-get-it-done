@@ -33,7 +33,7 @@ const SignUpForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            await axios.post('/dj-rest-auth/registration/', signUpData);
+            await axios.post('dj-rest-auth/registration/', signUpData);
             history.push('/');
         } catch(err) {
             setErrors(err.response?.data);
@@ -43,13 +43,13 @@ const SignUpForm = () => {
     return (
         <Row className={styles.Row}>
         <Col className='my-auto py-2 p-md-2' md={6}>
-            <Container className={`${styles.SignUpRow1} p-4 `}>
+            <Container className={`${styles.SignUpRow1} p-5 `}>
             <Link className={styles.Link} to='/signup'>
                 new user
             </Link>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className='mb-3' controlId='formBasicEmail'>
-                <Form.Label className='d-none'>Username</Form.Label>
+                <Form.Group className='mb-3' controlId='username'>
+                <Form.Label className='d-none'>username</Form.Label>
                 <Form.Control
                     className={`${styles.Input} ${styles.BorderTop}`}
                     type='text'

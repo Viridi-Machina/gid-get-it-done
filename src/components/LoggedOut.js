@@ -11,10 +11,10 @@ const SignUpForm = () => {
     <Row className={styles.Row}>
         <Col className="my-auto py-2 p-md-2" md={6}>
             <Container className={`${styles.SignUpRow1} p-4 `}>
-            <Link className={styles.Link} to='/signin'>sign in</Link>
+            <Link className={styles.Link} to='/sign-in'>sign in</Link>
             </Container>
             <Container className={`mt-3 ${styles.SignUpRow3}`}>
-                <Link className={styles.Link} to="/signup">
+                <Link className={styles.Link} to="/sign-in">
                 <p>Don't have an account yet?</p>
                 <span>get started now</span>
                 </Link>
