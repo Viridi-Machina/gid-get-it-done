@@ -48,6 +48,26 @@ const SignUpForm = () => {
                 new user
             </Link>
             <Form onSubmit={handleSubmit}>
+                {errors.username?.map((message, idx) => (
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
+                {errors.password1?.map((message, idx) => (
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
+                {errors.password2?.map((message, idx) => (
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
+                {errors.non_field_errors?.map((message, idx) => (
+                    <Alert variant='warning' key={idx}>
+                        {message}
+                    </Alert>
+                ))}
                 <Form.Group className='mb-3' controlId='username'>
                 <Form.Label className='d-none'>username</Form.Label>
                 <Form.Control
@@ -59,11 +79,6 @@ const SignUpForm = () => {
                     onChange={handleChange}
                 />
                 </Form.Group>
-                {errors.username?.map((message, idx) => (
-                    <Alert variant='warning' key={idx}>
-                        {message}
-                    </Alert>
-                ))}
 
                 <Form.Group className='mb-3' controlId='password1'>
                 <Form.Label className='d-none'>Password</Form.Label>
