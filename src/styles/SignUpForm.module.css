@@ -15,7 +15,7 @@
     box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.1);
 }
 
-.Input:nth-child(2) {
+.BorderTop {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -101,4 +101,5 @@
     border-radius: 15px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    border: #ffffff;
 }
