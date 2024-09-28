@@ -10,7 +10,7 @@ import { SetCurrentUserContext } from '../../App';
 
 
 
-const SignInForm = () => {
+function SignInForm() {
     const setCurrentUser = useContext(SetCurrentUserContext)
 
     const [signInData, setSignUpData] = useState({
