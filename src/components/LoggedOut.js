@@ -3,30 +3,33 @@ import { Link } from "react-router-dom";
 
 import logo from "../assets/gid-logo.png";
 import styles from "../styles/LoggedOut.module.css";
+import SignInForm from "../pages/auth/SignInForm";
 
 import { Image, Col, Row, Container } from "react-bootstrap";
 
 const SignUpForm = () => {
   return (
-    <Row className={styles.Row}>
-        <Col className="my-auto py-2 p-md-2" md={6}>
-            <Container className={`${styles.SignUpRow1} p-4 `}>
-            <Link className={styles.Link} to='/sign-in'>sign in</Link>
-            </Container>
-            <Container className={`mt-3 ${styles.SignUpRow3}`}>
-                <Link className={styles.Link} to="/sign-in">
-                <p>Don't have an account yet?</p>
-                <span>get started now</span>
-                </Link>
-            </Container>
+    <div>
+        <Row className={`${styles.Row} ${styles.FadeOut}`}>
+        <Col md={3} className={`my-auto p-0 d-flex justify-content-end`}>
+            <Image className={`${styles.ImageLH}`} src={logo} />
         </Col>
-        <Col
-            md={6}
-            className={`my-auto d-none d-md-block p-2 ${styles.SignUpCol}`}
-        >
-            <Image className={styles.Image} src={logo} />
+        <Col md={6} className={`my-auto p-0 ${styles.Headers}`}>
+            <h1 className={`d-flex justify-content-center`}>
+            <span className={`${styles.BorderHeader1}`}>GET iT</span>
+            <span className={`${styles.BorderHeader1Copy}`}>GET iT</span>
+            <span className={`${styles.BorderHeader2}`}>&nbsp;DONE</span>
+            </h1>
+            <h2 className='d-flex justify-content-center'>
+                <span className={`${styles.BorderHeader3}`}>STARTED</span>
+            </h2>
         </Col>
-    </Row>
+        <Col md={3} className={`my-auto p-0 d-flex justify-content-start`}>
+            <Image className={`${styles.ImageRH}`} src={logo} />
+        </Col>
+        </Row>
+        <div className={`${styles.SignIn} ${styles.FadeIn}`}><SignInForm/></div>
+    </div>
   );
 };
 
