@@ -56,15 +56,50 @@ A live link to the deployed app can be visited [here](https://tipple-and-tail-7d
 
  **Epics page (Get Started)**
  ![image](https://github.com/user-attachments/assets/6c139a08-b133-4319-9db5-0499c49bfe23)
- If no Epics have yet been created then the user would be shown the above page. Clicking on [get started] will continue to the create Epics page where information can be added and tasks can be created.
+ If no Epics have yet been created then the user would be shown the above page. Clicking on [get started] will continue to the create Epics 
+ page where information can be added and tasks can be created.
  <br>
  <br>
  <br>
  <br>
 
+ **Epics page (display panel)**
+ ![image](https://github.com/user-attachments/assets/b36c0ced-92ac-40f2-b053-d2b3b1490695)
+ If data exists for epics on the database then the Epics card panel will display with some summary information as well as the chosen image 
+ for the Epic. Users would be able to scroll through more cards if the maximum page display for cards is exceeded. From here Epics can be 
+ selected to be redirected to the Tasks page, or by clicking an edit icon the Epic View page will be shown where CRUD functionality can be 
+ actioned provided superuser access is granted.
+ <br>
+ <br>
+ On mobile devices this would display in a list format instead to save space.
+ <br>
+ <br>
+ <br>
+ <br>
+ 
+ **Tasks page (display panel)**
+ ![image](https://github.com/user-attachments/assets/278dc298-01c3-4464-a4ee-71ea78332012)
+ The task version of the Epics page, showing once an Epic has been selected. Here Task summary information is shown and tasks can be selected 
+ to either be viewed in detail or, given appropriate access, updated or deleted after confirmation from the superuser.
+ <br>
+ <br>
+ <br>
+ <br>
 
- I would only later realise just how ambitious of a project I was creating for myself, majorly overcomplicating all aspects of the site.
- Thus time was massively cut short during this project from hours of bug fixing just to get simple models in place.
+ **Epic/Task View page**
+ ![image](https://github.com/user-attachments/assets/d5752993-dec8-469f-bf9e-91efa599bc0f)
+ This view page is where users can carry out CRUD actions or view a given card in further detail.
+ <br>
+ <br>
+ <br>
+ <br>
+
+ **Profile page**
+ ![image](https://github.com/user-attachments/assets/9f703d87-ce30-44a4-9ba8-686ef3465dfe)
+ For a small amount of user customisation, a profile page will also exist. Here users can add personal information about themselves and add a 
+ profile image/avatar that other collaborators will see as assignees on Tasks and Epics. The page would also show some statistics, for 
+ example how many Tasks have been assigned to them. Additionally, a Profile List page would also be added so that users can view all other 
+ collaborators involved with the project.
 
 </details>
 
