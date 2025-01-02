@@ -104,16 +104,18 @@ A live link to the deployed app can be visited [here](https://tipple-and-tail-7d
 </details>
 
 ## Themes
-
-![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/baf36a9e-0af3-45af-9f35-d984193ca2c4)
+![image](https://github.com/user-attachments/assets/a8605fd8-ce9c-41a1-9c29-61c54621fd54)
+<br>
+The blue colour palette used above is used to set the overally theme for the app. During research into theming, blue was highlighted as the most common colour for general productivity and focus. As a result the various shades are used to add accents and detaiils to titles, buttons and various other interactable elements - allowing differentiation in a simplistic yet stylistic design that further pushes user engagement.
 <br>
 <br>
-The general colour palette for the site was picked at custom - drawing from the themes of freedom, excitement and fun.
-Colours of bright yellow gold, purple and blues would become signature; and with nightclub atmospheres in mind this research led to 
-a glow effect being applied onto dark grey slate backgrounds to achieve an exciting neon-theme.
+The colour pallet was taken from a website called VENNGAGE: https://venngage.com/blog/blue-color-palettes/
+<br>
+<br>
+With regards to the general CSS styling of the app, Bootsrap React was used to degree - although for a truly custom feeling design most of the CSS was custom made for this project. Many fonts had been looked at with the use of googlefonts, however ultimately it was decided that the default React font fit the design aesthetic perfectly; sans-serif, circular curves to the text that was simple and serious enough to enhance the app's overall design focus while resembling the custom logo.
 
-With regards to font and general CSS styling Tailwind was used to a large degree to help speed up the process of a truly custom feeling design, 
-albeit still time consuming. I had heard about the positives of using Tailwind and personally was against bootstrap's simplified and template-based design.
+## Custom Logo
+![image](https://github.com/user-attachments/assets/fac1b3f3-8542-4a9f-9167-87846bcac54f)
 
 
 💠 **Development**
