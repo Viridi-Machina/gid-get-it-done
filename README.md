@@ -114,8 +114,17 @@ The colour pallet was taken from a website called VENNGAGE: https://venngage.com
 <br>
 With regards to the general CSS styling of the app, Bootsrap React was used to degree - although for a truly custom feeling design most of the CSS was custom made for this project. Many fonts had been looked at with the use of googlefonts, however ultimately it was decided that the default React font fit the design aesthetic perfectly; sans-serif, circular curves to the text that was simple and serious enough to enhance the app's overall design focus while resembling the custom logo.
 
-## Custom Logo
-![image](https://github.com/user-attachments/assets/fac1b3f3-8542-4a9f-9167-87846bcac54f)
+## App name & Custom Logo
+![image](https://github.com/user-attachments/assets/933a9a2b-7d80-4103-9ab1-a716043fe617)
+<br>
+With the idea of a task management app I eventually landed on the name 'Get it Done', or 'GiD' (abbreviated). It is short, easy to remember and acts as a motivational phrase with the use of authoritative text, calling the user immediately to action.
+<br>
+<br>
+The set of logos above were created using an online source - express.adobe.com. GiD would subsequently spark the idea of a logo which was circular in design, where the G and D could be joined together by an 'i' in the center to create a full a circle; representing continuity of action and cycles of development. Colouring was driven by the colour pallet identified above and would remain consistent throughout the app.
+Furthermore, the circlular design with two halves would allow for animation where it could be split into two halves.
+<br>
+<br>
+It became apparent that the details of the main logo (left hand image) would be far too hard to see as a favicon icon. Thus a second alternative logo was produced with more thickness that could be identified more easily from a browser tab, yet still be recognisable and consistent with the main logo - however in this case the imagery resembles a door and lock as a result of the symmetry that was introduced to 'clean' up the icon at such small scales.
 
 
 💠 **Development**
