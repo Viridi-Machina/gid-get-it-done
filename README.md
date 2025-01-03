@@ -181,32 +181,41 @@ Each user story was given 1-4 acceptance criteria and each given story point sco
 The data models created for this project are displayed in the image below:<br>
 <br>
  
-![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/32bd5dc3-416c-47c0-a5be-0e69152fd14d)
+![image](https://github.com/user-attachments/assets/1cb63f1f-375c-4f3b-be72-649ce2c5890f)
 
 <br>
 
-The data models can be divided into 3 main apps to separate functionality:<br>
-🔷 **User App**: This app handles user accounts as well as their enquiries and comments made to event posts.<br>
-🔹 `User` - This model represents any user account, containing their name, email adress, mobile number, bookings and account status.<br>
-🔹 `Enquiry` - This model represents enquiries made by the user, containing messages submitted to the site admin.<br>
-🔹 `Comment` - This model represents comments made by the user on posted events, requiring approval by an admin.<br>
+All models relate to a single hemogenous app, where each data model is simple in nature due to the relatively simple function of said app.
 <br>
-After discussing with my mentor it would become apparent that creating a custom user model was massively overcomplicating things, and a default user model was then used.
+<br>
+🔷 **Profile model**: This model effectively acts as a custom extension of the default django user model.<br>
+🔹 `owner` - This OneToOne directly relates to the default django user model id (where created profiles are stored on the DB).<br>
+🔹 `name` - This field allows for a custom name to be set by the user, which will be displayed when fetching the profile-name data.<br>
+🔹 `title` - This field allows for a custom title, such as 'junior develepor' or 'project leader', which will be displayed on the profile.<br>
+🔹 `image` - This field allows the user to upload a custom image or avatar to be displayed within the app and profile page.<br>
+🔹 `created_at` - This field stamps when the user was created.
+🔹 `updated_at` - This field stamps how long ago an update was made by the user to their profile.<br>
+<br>
 
-🟣 **About App**: This app handles the about and event models, both handled by the site admin.<br>
-🔺 `About` - This model represents an about page, filled out and updated byu the site admin.<br>
-🔺 `Event` - This model represents an events page, a psuedo blog-post view which displays events that can link to bookings.<br>
+🟣 **Epic model**: This model allows users to create Epics, which each have subdivisions of tasks, to help an individual or team organise and plan their project workload.<br>
+🔺 `title` - This field sets the title for a given epic.<br>
+🔺 `image` - This field allows a user to upload an image for an epic, allowing for visual differentiation between them.<br>
+🔺 `created_by` - This OneToOne field relates to the user who created the epic.<br>
+🔺 `status` - This field relates to a table of 4 status choices; the user can set an epic as 'To-do', 'In Progress', 'Completed', or 'Backlog'.<br>
+🔺 `created_at` - This field stamps when the epic was created.<br>
+🔺 `updated_at` - This field stamps how long ago an update was made by the user to the epic, allowing users to see the activity of said epic relative to others.<br>
 <br>
 
-🔶 **Booking App**: This app handles the booking process; filtering available tables, timeslots and booking packages.<br>
-🔸`Booking` - This model represents the core booking process, storing all associated fields.<br>
-🔸`Table` - This model stores a small number of tables with unique table numbers and capacity which can be updated by an admin.<br>
-🔸`TimeSlot` - This model represents the chosen time slot to be applied to the booking and table.<br>
-🔸`TableSlot` - This model represents the specific tables with a chosen TimeSlot and TableSlot.<br>
-🔸`Package` - This model represents additional extras for booking customization, which are also used to tag bookings.<br>
-<br>
-After speaking with my mentor the booking model was also overcomplicated, and in need of large changes to the model which had already been migrated, whilst removing
-some unneccesary models such as TimeSlot and TableSlot and compressing them into the one Table model.
+🔶 **Task Model**: This model allows the creation of multiple tasks for a given Epic and allows users to set SMART goals with the aid of priority and completion-date allocation.<br>
+🔸`title` - This field sets the title for a given task.<br>
+🔸`description` - This field allows the user to create a small description/summary for the task which other users can view.<br>
+🔸`assigned_to` -  This OneToMany field shows which other users have been assigned to a given task.<br>
+🔸`created_by` - This OneToOne field relates to the user who created the task.<br>
+🔸`status` - This field relates to a table of 4 status choices; the user can set a task as 'To-do', 'In Progress', 'Completed', or 'Backlog'.<br>
+🔸`priority` - This field relates to a table of 3 priority choices; the user can set a task as 'LOW', 'MEDIUM' or 'HIGH' priority.<br>
+🔸`created_at` - This field stamps when the task was created.<br>
+🔸`updated_at` - This field stamps how long ago an update was made by the user to the task, allowing users to see the activity of said task relative to others.<br>
+🔸`completion_date` - This field allows a user to set a date in which a task is proposed to have been completed by.<br>
 
 
 </details>
@@ -220,14 +229,6 @@ some unneccesary models such as TimeSlot and TableSlot and compressing them into
 **Authentication & Authorisation**
 
 **Future Feature Implementation**
-- Completion of the Event model, linked to a event detail view which also provides user interactions through leaving comments on events.
-- Completion of the Enquiry form on the home page - which had to be cut from development - as the main booking system took priority and
-  turned out to be rather complicated to get a grasp of.
-- Menu feature in about section as well as opening times being displayed for users.
-- Links from the events page to set the date automatically in the booking page when following the link.
-- Footer with contact information and socials.
-- Increased detail with unsuccessful booking - no tables available at this time (avoiding double bookings - offer an alternative time slot.
-- Improve responsiveness for smaller devices.
 
 ## Bugs
 Double clicking the create booking button before the first response is completed results in a duplicate booking.
