@@ -129,7 +129,7 @@ It became apparent that the details of the main logo (left hand image) would be 
 
 💠 **Development**
 
-User Stories:
+## User Stories:
 <details>
  <summary>🔵 See User Stories (User) 🔍</summary>
  
@@ -165,9 +165,31 @@ User Stories:
   
 </details>
 
-MOSCOW model in use for user stories.
-![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/847130a5-90e0-4ef6-b197-13da0c67ece6)
-Following agile methodology a great deal of time was spent setting up the project kanban and other various boards where the project could be visualised.
+## Planning and MOSCOW modelling:
+
+Following agile methodology a great deal of time was spent setting up the project kanban and other various boards where the project could be visualised in 5 key displays:
+
+`User Story Table` - This table shows all user stories at a glance, along with their MOSCOW and EPIC allocations. The project is split into 3 main epics based on the relationships the stories have with each other, and are all labeled by priority using MOSCOW terminology.<br>
+A Link to this github page can be found [here](https://github.com/users/Viridi-Machina/projects/5/views/3?visibleFields=%5B%22Title%22%2C%22Status%22%2C158724117%2C158725690%5D)
+<details>
+ <summary> User Story Table 🔍</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/ac3e1ef4-1bcc-4b7e-a941-1a370317715d)
+</details>
+<br>
+<br>
+
+`Progress Board` - This board displays the active progress of the project; filtered to only show the user stories as tasks have their own table and are labled as complete there.<br>
+A Link to this github page can be found [here](https://github.com/users/Viridi-Machina/projects/5/views/1?filterQuery=%F0%9F%94%B5)
+<details>
+ <summary> Progress Board 🔍</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/ac3e1ef4-1bcc-4b7e-a941-1a370317715d)
+</details>
+<br>
+<br>
+
+
 Each user story was given 1-4 acceptance criteria and each given story point scores as well as their own respective tasks
 
 ![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/00a298ee-bb29-40b7-8315-21a441dcd28a)
