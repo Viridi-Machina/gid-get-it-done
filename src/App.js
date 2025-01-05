@@ -12,17 +12,20 @@ import { useCurrentUser } from './contexts/CurrentUserContext';
 
 function App() {
 
-    const currentUser = useCurrentUser();
-    const loggedInDisplay = <NavBar />;
+    // const currentUser = useCurrentUser();
+    // const loggedInDisplay = <NavBar />;
 
     return (
         <div className={styles.App}>
-            {currentUser ? loggedInDisplay : <></> }
+            {/* {currentUser ? loggedInDisplay : <></> } */}
             <NavBar />
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />
                     <Route exact path='/epic-dashboard' render={() => <p>Epic Dashboard</p>} />
+                    <Route exact path='/tasks' render={() => <p>Tasks</p>} />
+                    <Route exact path='/team' render={() => <p>Team</p>} />
+                    <Route exact path='/view-profile' render={() => <p>Profile</p>} />
                     <Route exact path='/sign-in' render={() =><SignInForm />} />
                     <Route exact path='/new-user' render={() => <SignUpForm />} />
                     <Route render={() => <p>Page not found</p>} />

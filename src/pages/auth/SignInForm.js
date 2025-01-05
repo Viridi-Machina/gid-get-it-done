@@ -94,7 +94,7 @@ function SignInForm() {
             </Form>
             </Container>
             <Container className={`mt-3 ${styles.SignUpRow3}`}>
-            <Link className={styles.Link} to='/signin'>
+            <Link className={styles.Link} to='/new-user'>
                 <p>Don't have an account?</p>
                 <span>register now</span>
             </Link>

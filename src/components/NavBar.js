@@ -26,21 +26,23 @@ const NavBar = () => {
 
     const loggedInNavLinks = (
             <>
-                <div className={styles.NavLink}>
-                    <i className="fas fa-fw fa-circle-user"></i>{currentUser?.username}
-                </div>
                 <Nav>
-                    <NavLink className={styles.NavLink} to="/epic-dashboard" onClick={handleSignOut}>
+                    <NavLink className={styles.NavLink} to='/view-profile'>
+                        <i className="fas fa-fw fa-circle-user"></i>{currentUser?.username}
+                    </NavLink>
+                </Nav>
+                <Nav>
+                    <NavLink className={styles.NavLink} to="/epic-dashboard">
                         <i className="fas fa-fw fa-diagram-successor"></i>Epics
                     </NavLink>
                 </Nav>
                 <Nav>
-                    <NavLink className={styles.NavLink} to="#" onClick={handleSignOut}>
+                    <NavLink className={styles.NavLink} to="/tasks">
                         <i className="fas fa-fw fa-diagram-project"></i>Tasks
                     </NavLink>
                 </Nav>
                 <Nav>
-                    <NavLink className={styles.NavLink} to="#" onClick={handleSignOut}>
+                    <NavLink className={styles.NavLink} to="/team">
                         <i className="fas fa-fw fa-people-group"></i>Team
                     </NavLink>
                 </Nav>
