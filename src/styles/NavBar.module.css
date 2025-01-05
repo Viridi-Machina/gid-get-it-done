@@ -1,11 +1,20 @@
 @import '../App.module.css';
 
-.NavBar {
+.SideBar {
     background-image: linear-gradient(to right, white, var(--blue-4));
     background-color: white;
     border-bottom: 2px solid var(--blue-4);
-    width: 100vw;
-    box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.2);
+    width: 12rem;
+    height: 100vh;
+    margin-left: 0;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 3px 0px 5px rgba(128, 128, 128, 0.2);
+}
+
+.Logo {
+    margin-left: 2rem;
+    margin-block: 1rem;
 }
 
 .NavButton {
@@ -18,8 +27,8 @@
 
 .NavLink {
     text-decoration: none;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
     width: 8rem;

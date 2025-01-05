@@ -7,16 +7,21 @@ import NavBar from './components/NavBar';
 import LoggedOut from './components/LoggedOut';
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
+import { useCurrentUser } from './contexts/CurrentUserContext';
 
 
 function App() {
 
+    const currentUser = useCurrentUser();
+    const loggedInDisplay = <NavBar />;
+
     return (
         <div className={styles.App}>
-            <NavBar />
+            {currentUser ? loggedInDisplay : <></> }
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />
+                    <Route exact path='/epic-dashboard' render={() => <p>Epic Dashboard</p>} />
                     <Route exact path='/sign-in' render={() =><SignInForm />} />
                     <Route exact path='/new-user' render={() => <SignUpForm />} />
                     <Route render={() => <p>Page not found</p>} />
