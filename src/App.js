@@ -18,6 +18,7 @@ function App() {
     return (
         <div className={styles.App}>
             {currentUser ? loggedInDisplay : <></> }
+            <NavBar />
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />

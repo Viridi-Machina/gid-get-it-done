@@ -26,9 +26,26 @@ const NavBar = () => {
 
     const loggedInNavLinks = (
             <>
-                {currentUser?.username}
+                <div className={styles.NavLink}>
+                    <i className="fas fa-fw fa-circle-user"></i>{currentUser?.username}
+                </div>
                 <Nav>
-                    <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+                    <NavLink className={styles.NavLink} to="/epic-dashboard" onClick={handleSignOut}>
+                        <i className="fas fa-fw fa-diagram-successor"></i>Epics
+                    </NavLink>
+                </Nav>
+                <Nav>
+                    <NavLink className={styles.NavLink} to="#" onClick={handleSignOut}>
+                        <i className="fas fa-fw fa-diagram-project"></i>Tasks
+                    </NavLink>
+                </Nav>
+                <Nav>
+                    <NavLink className={styles.NavLink} to="#" onClick={handleSignOut}>
+                        <i className="fas fa-fw fa-people-group"></i>Team
+                    </NavLink>
+                </Nav>
+                <Nav>
+                    <NavLink className={styles.NavLink} to="#" onClick={handleSignOut}>
                         <i className="fas fa-fw fa-circle-arrow-right"></i>Sign out
                     </NavLink>
                 </Nav>
@@ -58,14 +75,6 @@ const NavBar = () => {
         </>
     );
 
-    const loggedInSignOut = (
-        <>
-            <Nav>
-                
-            </Nav>
-        </>
-    );
-
     return (
         <>
             <Container className={styles.SideBar}>
@@ -74,16 +83,6 @@ const NavBar = () => {
                         <Navbar.Brand>
                             <img src={logo} alt='logo' height='100' />
                         </Navbar.Brand>
-                    </NavLink>
-                </Nav>
-                <Nav>
-                    <NavLink
-                        exact
-                        className={styles.NavLink} 
-                        activeClassName={styles.Active} 
-                        to='/epic-dashboard'
-                    >
-                        <i className='fas fa-fw fa-circle-h'></i>Home
                     </NavLink>
                 </Nav>
                 {currentUser ? loggedInNavLinks : loggedOutNavLinks}
