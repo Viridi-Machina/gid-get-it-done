@@ -5,15 +5,19 @@
 Get it Done (GiD) is a free proof-of-concept productivity app designed for individuals who want to a tool to help assist manage a personal project or for small-scale collaborations which could benefit from task delegation and tracking without the need for immediate communication. The app is designed to be simpler and easier-to-use than it's competition while giving a slick user experience that encourages productivity with it's use of colours, animations and general design aesthetic - it's fun to use!
 
 A live link to the deployed app can be visited [here](https://tipple-and-tail-7dca6c4d30d7.herokuapp.com/).
+<br>
+<br>
 
-## Process
+# 💠 Process
 
-**Problem Statement**
+## Problem Statement
 > You have seen a gap in the market for a productivity app which does not focus entirely on function, but rather bridges the gap between a simple task manager app and a more complicated project manager app that offers a potentially overwhelming experience for new collaborators and individuals who want to improve their productivity and planning.
+<br>
+<br>
 
-💠 **Design**
+## Design (wireframing)
 <details>
- <summary> Wireframes</summary>
+ <summary> See Wireframes 🔍</summary>
  
  ### Low fidelity wireframing -> Balsamiq
  Low fidelity wireframes were created using Balsamiq to touch upon all aspects of the app's deisgn requirements.
@@ -102,6 +106,8 @@ A live link to the deployed app can be visited [here](https://tipple-and-tail-7d
  collaborators involved with the project.
 
 </details>
+<br>
+<br>
 
 ## Themes
 ![image](https://github.com/user-attachments/assets/a8605fd8-ce9c-41a1-9c29-61c54621fd54)
@@ -113,6 +119,9 @@ The colour pallet was taken from a website called VENNGAGE: https://venngage.com
 <br>
 <br>
 With regards to the general CSS styling of the app, Bootsrap React was used to degree - although for a truly custom feeling design most of the CSS was custom made for this project. Many fonts had been looked at with the use of googlefonts, however ultimately it was decided that the default React font fit the design aesthetic perfectly; sans-serif, circular curves to the text that was simple and serious enough to enhance the app's overall design focus while resembling the custom logo.
+<br>
+<br>
+<br>
 
 ## App name & Custom Logo
 ![image](https://github.com/user-attachments/assets/933a9a2b-7d80-4103-9ab1-a716043fe617)
@@ -125,9 +134,10 @@ Furthermore, the circlular design with two halves would allow for animation wher
 <br>
 <br>
 It became apparent that the details of the main logo (left hand image) would be far too hard to see as a favicon icon. Thus a second alternative logo was produced with more thickness that could be identified more easily from a browser tab, yet still be recognisable and consistent with the main logo - however in this case the imagery resembles a door and lock as a result of the symmetry that was introduced to 'clean' up the icon at such small scales.
+<br>
+<br>
 
-
-💠 **Development**
+## 💠 Development
 
 ## User Stories:
 <details>
@@ -164,44 +174,71 @@ It became apparent that the details of the main logo (left hand image) would be 
   so that I can make necessary changes without starting again.
   
 </details>
+<br>
+<br>
 
 ## Planning and MOSCOW modelling:
 
-Following agile methodology a great deal of time was spent setting up the project kanban and other various boards where the project could be visualised in 5 key displays:
+Following agile methodology a great deal of time was spent setting up the project kanban and other various boards where the project could be visualised in. They would be split into 5 key displays:
 
-`User Story Table` - This table shows all user stories at a glance, along with their MOSCOW and EPIC allocations. The project is split into 3 main epics based on the relationships the stories have with each other, and are all labeled by priority using MOSCOW terminology.<br>
-A Link to this github page can be found [here](https://github.com/users/Viridi-Machina/projects/5/views/3?visibleFields=%5B%22Title%22%2C%22Status%22%2C158724117%2C158725690%5D)
+### 1. User Story Table<br>
+This table shows all user stories at a glance, along with their MOSCOW and EPIC allocations. The project is split into 3 main epics based on the relationships the stories have with each other, and are all labeled by priority using MOSCOW terminology.<br>
+Each user story was given 1-3 acceptance criteria based on the scale and complexity of each story.<br>
+A Link to this github page can be found [here.](https://github.com/users/Viridi-Machina/projects/5/views/3?visibleFields=%5B%22Title%22%2C%22Status%22%2C158724117%2C158725690%5D)
 <details>
- <summary> User Story Table 🔍</summary>
+ <summary> View Table 🔍</summary>
  
  ![image](https://github.com/user-attachments/assets/ac3e1ef4-1bcc-4b7e-a941-1a370317715d)
 </details>
 <br>
-<br>
 
-`Progress Board` - This board displays the active progress of the project; filtered to only show the user stories as tasks have their own table and are labled as complete there.<br>
-A Link to this github page can be found [here](https://github.com/users/Viridi-Machina/projects/5/views/1?filterQuery=%F0%9F%94%B5)
+### 2. Progress Board<br> 
+This board displays the active progress of the project; filtered to only show the user stories as tasks have their own table and are labled as complete there.<br>
+A Link to this github page can be found [here.](https://github.com/users/Viridi-Machina/projects/5/views/1?filterQuery=%F0%9F%94%B5)
 <details>
- <summary> Progress Board 🔍</summary>
+ <summary> View Board 🔍</summary>
  
  ![image](https://github.com/user-attachments/assets/ac3e1ef4-1bcc-4b7e-a941-1a370317715d)
 </details>
 <br>
+
+### 3. MOSCOW Board<br>
+This board displays the allocation of each user story to Must Have, Should Have, Could Have and Won't Have fields; they can then be labelled when viewed in other displays such as the User Story Table.<br>
+A Link to this github page can be found [here.](https://github.com/users/Viridi-Machina/projects/5/views/5)
+<details>
+ <summary> View Board 🔍</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/82019957-777a-4abb-923d-d48b04f623d4)
+</details>
 <br>
 
+### 4. Tasks Table<br>
+This table displays a breakdown of all created tasks in lists below each user story. Miscellaneous tasks that were deemed necessary as part of production but were not directly tied to a user story were categorised as 'General Tasks' as seen at the bottom highlighted in orange.
+Tasks were labelled further with the Sprint field, which relates to another board used to define a number of Sprints based on groups of tasks.
+A Link to this github page can be found [here.](https://github.com/users/Viridi-Machina/projects/5/views/6?visibleFields=%5B%22Title%22%2C158724756%2C158725690%2C158724117%2C158728792%2C%22Status%22%5D)
+<details>
+ <summary> View Table 🔍</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/e86bed91-50ac-47e8-bf54-4a639a2331a2)
+</details>
+<br>
 
-Each user story was given 1-4 acceptance criteria and each given story point scores as well as their own respective tasks
+### 5. Sprints Board
+Finally the Sprints Board, as mentioned above, displays a breakdown of the individual sprints planned for the project - each containing groups of development-related tasks across the different user stories or general tasks that were created.>br>
+Each sprint timebox would be set to 1 week cycles, however with the limited experience learnt for react and DRF leading up to this project significantly more time was taken for the sprints to be completed.<br>
+A Link to this github page can be found [here.](https://github.com/users/Viridi-Machina/projects/5/views/7?visibleFields=%5B%22Title%22%2C%22Status%22%5D&layout=board&filterQuery=%23TASK&verticalGroupedBy%5BcolumnId%5D=158728792)
+<details>
+ <summary> View Board 🔍</summary>
+ 
+ ![image](https://github.com/user-attachments/assets/4acb8502-7b81-4b50-b294-8c3d06be2283)
+</details>
+<br>
+<br>
 
-![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/00a298ee-bb29-40b7-8315-21a441dcd28a)
-
-![image](https://github.com/Viridi-Machina/tipple-and-tail/assets/146846939/2939992a-139a-426e-9f46-405e4319df20)
-
-
-💠 **Data Models**
+## Data Models
+The data models created for this project, along with their accompanying desciptions are displayed in the image below:<br>
 <details>
  <summary> See detail</summary>
-The data models created for this project are displayed in the image below:<br>
-<br>
  
 ![image](https://github.com/user-attachments/assets/1cb63f1f-375c-4f3b-be72-649ce2c5890f)
 
@@ -239,10 +276,11 @@ All models relate to a single hemogenous app, where each data model is simple in
 🔸`updated_at` - This field stamps how long ago an update was made by the user to the task, allowing users to see the activity of said task relative to others.<br>
 🔸`completion_date` - This field allows a user to set a date in which a task is proposed to have been completed by.<br>
 
-
 </details>
+<br>
+<br>
 
-## Features
+## 💠 Features
 **CRUD Functionality**
 - Users can create, edit and delete their created bookings from the booking dashboard.
 - Admins can access all user's bookings for the purpose of updating or deleting.
@@ -369,6 +407,5 @@ All of the above validations were passed:
   </details>
 
 ## Credits
-- Mentor: Gareth McGirr -> booking view and form code heavily used and adapted for my own project.
 - Other code snipets have been referrenced within the project files.
-- All styling is completely my own, graphics and logos made via adobe flash and figma. Hero background image from adobe stock
+- All styling is completely my own, graphics and logos made via adobe flash.
