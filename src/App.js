@@ -13,7 +13,7 @@ function App() {
 
     return (
         <div className={styles.App}>
-            {/* <NavBar /> */}
+            <NavBar />
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />

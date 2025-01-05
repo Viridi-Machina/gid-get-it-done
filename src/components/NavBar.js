@@ -1,19 +1,34 @@
 import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import axios from "axios";
 
 import logo from '../assets/gid-logo.png';
 import styles from '../styles/NavBar.module.css';
-import { useCurrentUser } from '../contexts/CurrentUserContext';
+import { useCurrentUser, useSetCurrentUser, } from '../contexts/CurrentUserContext';
+import { removeTokenTimestamp } from "../utils/utils";
 
 
 const NavBar = () => {
     const currentUser = useCurrentUser();
+    const setCurrentUser = useSetCurrentUser();
     const loggedInNavLinks = (
         <>
             {currentUser?.username}
         </>
-);
+    );
+
+    // Async sign-out function for signout nav-link
+    const handleSignOut = async () => {
+        try {
+            await axios.post("dj-rest-auth/logout/");
+            setCurrentUser(null);
+            removeTokenTimestamp();
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     const loggedOutNavLinks = (
         <>
             <NavLink 
@@ -42,7 +57,7 @@ const NavBar = () => {
                     </Navbar.Brand>
                 </NavLink>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' className={styles.NavButton}>
-                    <i class="fa-solid fa-caret-down"></i>
+                    <i className="fa-solid fa-caret-down"></i>
                 </Navbar.Toggle>
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className='m-auto text-start'>
@@ -53,6 +68,9 @@ const NavBar = () => {
                             to='/'
                         >
                             <i className='fas fa-fw fa-circle-h'></i>Home
+                        </NavLink>
+                        <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+                            <i className="fas fa-sign-out-alt"></i>Sign out
                         </NavLink>
                         {currentUser ? loggedInNavLinks : loggedOutNavLinks}
                     </Nav>
