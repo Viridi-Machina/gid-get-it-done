@@ -12,13 +12,12 @@ import { useCurrentUser } from './contexts/CurrentUserContext';
 
 function App() {
 
-    // const currentUser = useCurrentUser();
-    // const loggedInDisplay = <NavBar />;
+    const currentUser = useCurrentUser();
+    const loggedInDisplay = <NavBar />;
 
     return (
         <div className={styles.App}>
-            {/* {currentUser ? loggedInDisplay : <></> } */}
-            <NavBar />
+            {currentUser ? loggedInDisplay : <></> }
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />
