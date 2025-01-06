@@ -1,0 +1,22 @@
+.ImageBox {
+    background: #ffffff;
+    border: 1px solid #f0f1f9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #7177a1;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.1);
+    height: 12rem;
+    margin-bottom: 1rem;
+}
+
+.ImageBox i {
+    font-size: 3rem;
+}
+
+.IconCenter {
+    height: 100%;
+    width: 100%;
+    align-items: center
+}

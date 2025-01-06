@@ -1,10 +1,10 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
-import styles from "../styles/Asset.module.css";
+import styles from "../styles/Loader.module.css";
 
-const Asset = ({ spinner, src, message }) => {
+const Loader = ({ spinner, src, message }) => {
   return (
-    <div className={`${styles.Asset} p-4`}>
+    <div className={`${styles.Loader}`}>
       {spinner && <Spinner animation="border" />}
       {src && <img src={src} alt={message} />}
       {message && <p className="mt-4">{message}</p>}
@@ -12,4 +12,4 @@ const Asset = ({ spinner, src, message }) => {
   );
 };
 
-export default Asset;
+export default Loader;

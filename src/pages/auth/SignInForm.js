@@ -61,28 +61,29 @@ function SignInForm() {
                         {message}
                     </Alert>
                 ))}
+                
                 <Form.Group className='mb-3' controlId='username'>
-                <Form.Label className='d-none'>username</Form.Label>
-                <Form.Control
-                    className={`${styles.Input} ${styles.BorderTop}`}
-                    type='text'
-                    placeholder='Username'
-                    name='username'
-                    value={username}
-                    onChange={handleChange}
-                />
+                    <Form.Label className='d-none'>username</Form.Label>
+                    <Form.Control
+                        className={`${styles.Input} ${styles.BorderTop}`}
+                        type='text'
+                        placeholder='Username'
+                        name='username'
+                        value={username}
+                        onChange={handleChange}
+                    />
                 </Form.Group>
 
                 <Form.Group className='mb-3' controlId='password'>
-                <Form.Label className='d-none'>Password</Form.Label>
-                <Form.Control
-                    className={styles.Input}
-                    type='password'
-                    placeholder='Password'
-                    name='password'
-                    value={password}
-                    onChange={handleChange}
-                />
+                    <Form.Label className='d-none'>Password</Form.Label>
+                    <Form.Control
+                        className={styles.Input}
+                        type='password'
+                        placeholder='Password'
+                        name='password'
+                        value={password}
+                        onChange={handleChange}
+                    />
                 </Form.Group>
 
                 <Button 
@@ -93,11 +94,12 @@ function SignInForm() {
                 </Button>
             </Form>
             </Container>
+
             <Container className={`mt-3 ${styles.SignUpRow3}`}>
-            <Link className={styles.Link} to='/new-user'>
-                <p>Don't have an account?</p>
-                <span>register now</span>
-            </Link>
+                <Link className={styles.Link} to='/new-user'>
+                    <p>Don't have an account?</p>
+                    <span>register now</span>
+                </Link>
             </Container>
         </Col>
         </Row>

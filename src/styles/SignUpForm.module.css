@@ -4,6 +4,10 @@
     height: calc(100vh - 81px);
 }
 
+.Row h1 {
+    padding-bottom: 1rem;
+}
+
 .Input {
     background: #ffffff;
     border: 1px solid #f0f1f9;

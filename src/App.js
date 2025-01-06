@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import LoggedOut from './components/LoggedOut';
 import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
+import EpicCreateForm from './pages/epics/EpicCreateForm';
 import { useCurrentUser } from './contexts/CurrentUserContext';
 
 
@@ -22,6 +23,7 @@ function App() {
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />
                     <Route exact path='/epic-dashboard' render={() => <p>Epic Dashboard</p>} />
+                    <Route exact path='/epic-dashboard/create' render={() => <EpicCreateForm />} />
                     <Route exact path='/tasks' render={() => <p>Tasks</p>} />
                     <Route exact path='/team' render={() => <p>Team</p>} />
                     <Route exact path='/view-profile' render={() => <p>Profile</p>} />

@@ -18,6 +18,7 @@
 
 .Main {
     padding-top: 82px;
+    margin-inline: 10rem;
 }
 
 * {
@@ -39,17 +40,5 @@ a:hover {
 }
 
 a:hover i {
-    color: var(--blue-1);
-}
-
-i {
-    color: var(--blue-2);
-    font-size: 2rem;
-    vertical-align: middle;
-    transition: color ease-in-out 0.4s;
-}
-
-i:hover {
-    cursor: pointer;
     color: var(--blue-1);
 }
