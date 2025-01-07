@@ -1,3 +1,7 @@
+.Container {
+    width: 30rem;
+}
+
 .ImageBox {
     background: #ffffff;
     border: 1px solid #f0f1f9;
@@ -7,16 +11,51 @@
     text-align: center;
     padding: 10px;
     box-shadow: 3px 4px 5px rgba(128, 128, 128, 0.1);
-    height: 12rem;
+    height: 16rem;
     margin-bottom: 1rem;
 }
 
-.ImageBox i {
-    font-size: 3rem;
+.ImageBox figure {
+    height: 100%;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Change {
+    position: relative;
+    width: fit-content;
+    top: -8.5rem;
+    right: -20rem;
+}
+
+.Change label {
+    padding: 0.2rem;
+    margin: 0;
+}
+
+.Change i {
+    font-size: 1.5rem;
+    color: var(--blue-1);
+    background-color: white;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+}
+
+.ImageBox input {
+    display: none;
 }
 
 .IconCenter {
     height: 100%;
     width: 100%;
     align-items: center
+}
+
+.Return {
+    margin-top: 1rem;
+    background-color: var(--blue-1);
 }

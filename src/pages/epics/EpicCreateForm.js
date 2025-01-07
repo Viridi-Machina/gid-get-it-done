@@ -5,6 +5,8 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import Alert from "react-bootstrap/Alert";
+import Image from "react-bootstrap/Image";
 
 import styles from "../../styles/SignUpForm.module.css";
 import btnStyles from '../../styles/Button.module.css';
@@ -12,92 +14,119 @@ import appStyles from "../../App.module.css";
 import epicStyles from '../../styles/EpicCreateEditForm.module.css';
 import Loader from "../../components/Loader";
 
-function PostCreateForm() {
+function EpicCreateForm() {
+    const [errors, setErrors] = useState({});
 
-  const [errors, setErrors] = useState({});
+    const [epicData, setEpicData] = useState({
+        title: "",
+        image: "",
+    });
+    const { title, image } = epicData;
 
+    const handleChange = (event) => {
+        setEpicData({
+            ...epicData,
+            [event.target.name]: event.target.value,
+        })
+    }
 
-  const textFields = (
-    <div className={``}>
-      {/* Add your form fields here */}
+    const handleChangeImage = (event) => {
+        if (event.target.files.length) {
+            URL.revokeObjectURL(image);
+            setEpicData({
+                ...epicData,
+                image: URL.createObjectURL(event.target.files[0]),
+            });
+        }
+    };
 
-    
-    
-      <Button
-        className={``}
-        onClick={() => {}}
-      >
-        cancel
-      </Button>
-      <Button className={``} type="submit">
-        create
-      </Button>
-    </div>
-  );
+    const formFields = (
+        <>
+            <Form.Group className='mb-3'>
+                <Form.Label className='d-none'>Title</Form.Label>
+                <Form.Control
+                    className={`${styles.Input} ${styles.BorderTop}`}
+                    type="text"
+                    name="title"
+                    placeholder='Choose Title'
+                    value={title}
+                    onChange={handleChange}
+                />
+            </Form.Group>
+            {errors?.title?.map((message, idx) => (
+                <Alert variant="warning" key={idx}>
+                {message}
+                </Alert>
+            ))}
+        
+            
 
-  return (
-    <Row className={styles.Row}>
-        <Col className='my-auto py-2 p-md-2' md={12}>
-            <Container className={`${styles.SignUpRow1} p-5 `}>
-            <h1 className={styles.Link} to='/'>Create Epic</h1>
-            <Form>
-                <Form.Group className='mb-3' controlId=''>
-                    <Form.Label className='d-none'>title</Form.Label>
-                    <Form.Control
-                        className={`${styles.Input} ${styles.BorderTop}`}
-                        type='text'
-                        placeholder='Title'
-                    />
-                </Form.Group>
-
-                <Form.Group className={`${epicStyles.ImageBox}`}>
+            <Form.Group className={`${epicStyles.ImageBox}`}>
+                {image ? (
+                    <>
+                    <figure>
+                        <Image className={appStyles.Image} src={image} rounded />
+                    </figure>
+                    <div className={`${epicStyles.Change}`}>
+                        <Form.Label
+                        className={`btn`}
+                        htmlFor="image-upload"
+                        >
+                            <i className="fa-solid fa-pen-to-square"></i>
+                        </Form.Label>
+                    </div>
+                    </>
+                ) : (
                     <Form.Label
                     className={`${epicStyles.IconCenter} d-flex justify-content-center`}
                     htmlFor="image-upload"
                     >
                         <div>
-                            <i class="fa-solid fa-upload"></i>
+                            <i className="fa-solid fa-upload"></i>
                             <Loader
                                 message="Upload image"
                             />
                         </div>
                     </Form.Label>
-                </Form.Group>
+                )}
+                
+                <Form.Control
+                    className={styles.HideControl}
+                    type="file"
+                    id="image-upload"
+                    accept="image/*"
+                    onChange={handleChangeImage}
+                />
+            </Form.Group>
 
-                <Button 
-                    className={`${btnStyles.Wide} ${styles.Button}`} 
-                    type='submit'
-                >
-                    Add to dashboard +
-                </Button>
+            <Button 
+                className={`${btnStyles.Wide} ${styles.Button}`} 
+                type='submit'
+            >
+                Add to dashboard +
+            </Button>
+            <Button
+                className={`${btnStyles.Button} ${styles.Button} ${epicStyles.Return}`}
+                // onClick={() => history.goBack()}
+            >
+                Return
+            </Button>
+        </>
+    );
+
+
+  return (
+    <Row className={`${styles.Row}`}>
+        <Col className='my-auto py-2 p-md-2' md={12}>
+            <Container className={`${styles.SignUpRow1} ${epicStyles.Container} p-5 `}>
+            <h1 className={styles.Link} to='/'>Create Epic</h1>
+            <Form>
+                {formFields}
             </Form>
             </Container>
         </Col>
     </Row>
-    // <Form>
-    //   <Row className={``}>
-    //     <Col className={`${styles.FormRow} ${styles.Container}`} md={7} lg={8}>
-    //       <Container className=''>
-    //         <Form.Group className={``}>
-
-    //             <Form.Label
-    //               className={`d-flex justify-content-center`}
-    //               htmlFor="image-upload"
-    //             >
-    //                 <i class="fa-solid fa-upload"></i>
-    //             </Form.Label>
-
-    //         </Form.Group>
-    //         <div className="d-md-none">{textFields}</div>
-    //       </Container>
-    //     </Col>
-
-    //     <Col md={5} lg={4} className={`${styles.FormRow}`}>
-    //       <Container className={appStyles.Content}>{textFields}</Container>
-    //     </Col>
-    //   </Row>
-    // </Form>
   );
 }
 
-export default PostCreateForm;
+export default EpicCreateForm;
