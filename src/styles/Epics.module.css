@@ -1,0 +1,15 @@
+.Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 4rem;
+    height: 18rem;
+    width: 24rem;
+}
+
+.Content {
+    padding-top: 14rem;
+    padding-left: 2rem;
+    height: 100vh;
+    
+}

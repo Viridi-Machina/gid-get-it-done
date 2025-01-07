@@ -143,7 +143,7 @@ function EpicCreateForm() {
     <Row className={`${styles.Row}`}>
         <Col className='my-auto py-2 p-md-2' md={12}>
             <Container className={`${styles.SignUpRow1} ${epicStyles.Container} p-5 `}>
-            <h1 className={styles.Link} to='/'>Create Epic</h1>
+            <h1 className={styles.Link}>Create Epic</h1>
             <Form onSubmit={handleSubmit}>
                 {formFields}
             </Form>
