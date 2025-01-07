@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -13,6 +13,8 @@ import btnStyles from '../../styles/Button.module.css';
 import appStyles from "../../App.module.css";
 import epicStyles from '../../styles/EpicCreateEditForm.module.css';
 import Loader from "../../components/Loader";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { axiosRequest } from "../../api/axiosDefaults";
 
 function EpicCreateForm() {
     const [errors, setErrors] = useState({});
@@ -22,6 +24,9 @@ function EpicCreateForm() {
         image: "",
     });
     const { title, image } = epicData;
+
+    const imageInput = useRef(null)
+    const history = useHistory()
 
     const handleChange = (event) => {
         setEpicData({
@@ -37,6 +42,24 @@ function EpicCreateForm() {
                 ...epicData,
                 image: URL.createObjectURL(event.target.files[0]),
             });
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData();
+    
+        formData.append("title", title);
+        formData.append("image", imageInput.current.files[0]);
+    
+        try {
+            const { data } = await axiosRequest.post("/epics/", formData);
+            history.push(`/epics/${data.id}`);
+        } catch (err) {
+            console.log(err);
+        if (err.response?.status !== 401) {
+            setErrors(err.response?.data);
+        }
         }
     };
 
@@ -96,6 +119,7 @@ function EpicCreateForm() {
                     id="image-upload"
                     accept="image/*"
                     onChange={handleChangeImage}
+                    ref={imageInput}
                 />
             </Form.Group>
 
@@ -107,7 +131,7 @@ function EpicCreateForm() {
             </Button>
             <Button
                 className={`${btnStyles.Button} ${styles.Button} ${epicStyles.Return}`}
-                // onClick={() => history.goBack()}
+                onClick={() => history.goBack()}
             >
                 Return
             </Button>
@@ -120,7 +144,7 @@ function EpicCreateForm() {
         <Col className='my-auto py-2 p-md-2' md={12}>
             <Container className={`${styles.SignUpRow1} ${epicStyles.Container} p-5 `}>
             <h1 className={styles.Link} to='/'>Create Epic</h1>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 {formFields}
             </Form>
             </Container>
