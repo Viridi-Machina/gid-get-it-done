@@ -9,8 +9,8 @@ import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
 import EpicCreateForm from './pages/epics/EpicCreateForm';
 import EpicDashboard from './pages/epics/EpicDashboard';
+import Epic from './pages/epics/EpicPage';
 import { useCurrentUser } from './contexts/CurrentUserContext';
-
 
 function App() {
 
@@ -23,6 +23,7 @@ function App() {
             <Container className={styles.Main}>
                 <Switch>
                     <Route exact path='/' render={() => <LoggedOut />} />
+                    <Route exact path='/epic/:id' render={() => <Epic />} />
                     <Route exact path='/epic-dashboard' render={() => <EpicDashboard />} />
                     <Route exact path='/epic-dashboard/create' render={() => <EpicCreateForm />} />
                     <Route exact path='/tasks' render={() => <p>Tasks</p>} />
