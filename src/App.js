@@ -9,7 +9,7 @@ import SignUpForm from './pages/auth/SignUpForm';
 import SignInForm from './pages/auth/SignInForm';
 import EpicCreateForm from './pages/epics/EpicCreateForm';
 import EpicDashboard from './pages/epics/EpicDashboard';
-import Epic from './pages/epics/EpicPage';
+import Epic from './pages/epics/Epic';
 import { useCurrentUser } from './contexts/CurrentUserContext';
 
 function App() {

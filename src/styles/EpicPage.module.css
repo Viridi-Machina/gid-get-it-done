@@ -11,5 +11,8 @@
     padding-top: 14rem;
     padding-left: 2rem;
     height: 100vh;
-    
+}
+
+.NoPadding {
+    padding: 0rem;
 }
