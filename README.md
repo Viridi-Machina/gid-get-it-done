@@ -290,65 +290,6 @@ All models relate to a single hemogenous app, where each data model is simple in
 
 **Future Feature Implementation**
 
-## Bugs
-Double clicking the create booking button before the first response is completed results in a duplicate booking.
-
-## Manual Testing
-
-<details>
-    <summary>Navbar :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/566cb972-aecc-4b80-8988-6c55432bfce6)
-</details>
-
-<details>
-    <summary>Homepage :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/93e8322f-f4d2-46ba-953f-100982543064)
-</details>
-
-<details>
-    <summary>Events Page :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/561d8b48-bbbe-40ca-a3e6-ddcbd4d2765b)
-</details>
-
-<details>
-    <summary>Register / Log In / Log Out :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/2ab2ad58-8354-43b3-84fb-56334d3d22f4)
-</details>
-
-<details>
-    <summary>Create Booking Page :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/0af3c36e-43fb-4af6-b182-264da21d53ec)
-</details>
-
-<details>
-    <summary>Booking Dashboard :mag:</summary>
-    
-   ![image](https://github.com/user-attachments/assets/68466ffc-00b9-4b53-8f4e-3f5eb3a93401)
-</details>
-
-**Lighthouse**
-Dev Tools lighthouse tool shows 99/100 for overall performance.
-![image](https://github.com/user-attachments/assets/3647919d-e0b3-4719-b1df-1bdc6f15ac0c)
-
-
-**Responsiveness**
-- This particular project was created mainly for desktop and tablets for business use as a way to manage and create bookings more-so than for users to create their own, albeit an option. 
-
-**Code Validation**
-W3C Markup Validation Service
-JSHint
-PEP8
-
-All of the above validations were passed:
-- All custom python files met pep8 criteria
-- No javascript was used in the project
-- All html source code checked for and found zero errors at this stage of deployment.
-
 ## Deployment
 **Heroku Deployment**
 <details>
@@ -405,7 +346,13 @@ All of the above validations were passed:
 
   ![image](https://github.com/Viridi-Machina/battleships/assets/146846939/9081df0b-d551-40f2-b9c1-f770b9d4a5fb)
   </details>
+</details>
 
 ## Credits
-- Other code snipets have been referrenced within the project files.
+- Most of the code has been modified from the course material - Moments Walkthrough Project.
 - All styling is completely my own, graphics and logos made via adobe flash.
+
+## Final Word
+I would like to say that this has been extremely difficult. Although there is still so much that I wanted to add in terms of functionality and README write-up, I am handing-in this project in a still mostly incomplete state knowing that I have failed my last chance at passing this course. I hope your time is not overly wasted in marking this final submission - A huge deal of time has been invested in this over the past few months.<br>
+Regards,<br>
+Jacen
