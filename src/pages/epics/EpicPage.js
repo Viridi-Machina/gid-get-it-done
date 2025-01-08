@@ -30,7 +30,7 @@ function EpicPage() {
     }, [id]);
 
     return (
-        <Container className={`${styles.SignUpRow1} ${epicStyles.NoPadding}`}>
+        <Container className={`${styles.SignUpRow1} ${epicStyles.NoPadding} ${epicStyles.Center}`}>
             <Epic {...epic.results[0]} epicPage/>
         </Container>
     )

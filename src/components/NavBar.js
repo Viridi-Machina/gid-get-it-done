@@ -53,7 +53,7 @@ const NavBar = () => {
                         <NavLink 
                             className={`${styles.NavLink} ${styles.NavButton}`}
                             activeClassName={styles.Active}
-                            to="/epic-dashboard"
+                            to="/epic/1"
                         >
                             <span><i className='fas fa-fw fa-diagram-successor'></i></span>
                             <h2>Epics</h2>

@@ -16,3 +16,8 @@
 .NoPadding {
     padding: 0rem;
 }
+
+.Center {
+    position: relative;
+    top: 14rem;
+}
